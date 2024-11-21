@@ -17,14 +17,15 @@
       background-color: #f4f7f6;
       color: #333;
       line-height: 1.6;
+      text-align: center;
     }
 
     /* Header styling */
     header {
       background-color: #007BFF;
       color: white;
-      text-align: center;
       padding: 40px 20px;
+      text-align: center;
     }
 
     header h1 {
@@ -37,33 +38,40 @@
       margin: 5px 0;
     }
 
-    /* CV section styling */
-    .cv {
-      width: 90%;
-      max-width: 1200px;
-      margin: 40px auto;
-      padding: 20px;
-      background-color: white;
-      border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Additional contact info styling */
+    .contact-info {
+      font-size: 1.2rem;
+      margin-top: 10px;
+      color: #ffffff;
     }
 
-    .cv h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-      text-align: center;
-      color: #007BFF;
+    .contact-info span {
+      margin: 0 15px;
     }
 
-    /* PDF Embed Styling */
-    .cv embed {
-      width: 100%;
+    /* CV container and layout */
+    .cv-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       height: 80vh;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin: 40px auto;
+      max-width: 1200px;
+    }
+
+    /* PDF Viewer */
+    .cv-container iframe {
+      width: 100%;
+      height: 100%;
       border: none;
       border-radius: 8px;
     }
 
-    /* Footer Styling */
+    /* Footer styling */
     footer {
       background-color: #333;
       color: white;
@@ -75,7 +83,6 @@
     footer p {
       font-size: 1rem;
     }
-
   </style>
 </head>
 <body>
@@ -84,13 +91,15 @@
   <header>
     <h1>Debbah Mehdi Sofiane</h1>
     <p>DevOps Engineer | France</p>
-    <p>Email: mehdi.debbah@hotmail.fr</p>
+    <div class="contact-info">
+      <span>Email: mehdi.debbah@hotmail.fr</span>
+      <span>Phone: +33 6 12 34 56 78</span>
+    </div>
   </header>
 
   <!-- CV Section -->
-  <section class="cv">
-    <h2>My CV</h2>
-    <embed src="CV_2024-11-21_mehdi_sofiane_debbah.pdf" type="application/pdf" width="100%" height="600px">
+  <section class="cv-container">
+    <iframe src="CV_2024-11-21_mehdi_sofiane_debbah.pdf" type="application/pdf"></iframe>
   </section>
 
   <!-- Footer Section -->
