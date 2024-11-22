@@ -4,108 +4,56 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Debbah Mehdi Sofiane - CV</title>
-  <style>
-    /* Reset and base styles */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Arial', sans-serif;
-      background-color: #f4f7f6;
-      color: #333;
-      line-height: 1.6;
-      text-align: center;
-    }
-
-    /* Header styling */
-    header {
-      background-color: #007BFF;
-      color: white;
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    header h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
-    }
-
-    header p {
-      font-size: 1.2rem;
-      margin: 5px 0;
-    }
-
-    /* Additional contact info styling */
-    .contact-info {
-      font-size: 1.2rem;
-      margin-top: 10px;
-      color: #ffffff;
-    }
-
-    .contact-info span {
-      margin: 0 15px;
-    }
-
-    /* CV container and layout */
-    .cv-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 80vh;
-      padding: 20px;
-      background-color: #ffffff;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      margin: 40px auto;
-      max-width: 1200px;
-    }
-
-    /* PDF Viewer */
-    .cv-container iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-      border-radius: 8px;
-    }
-
-    /* Footer styling */
-    footer {
-      background-color: #333;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-    }
-
-    footer p {
-      font-size: 1rem;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <!-- Header Section -->
+  <!-- Header -->
   <header>
-    <h1>Debbah Mehdi Sofiane</h1>
-    <p>DevOps Engineer | France</p>
-    <div class="contact-info">
-      <span>Email: mehdi.debbah@hotmail.fr</span>
-      <span>Phone: +33 6 12 34 56 78</span>
+    <div class="header-content">
+      <h1 id="name">Debbah Mehdi Sofiane</h1>
+      <p id="contact">
+        <a href="mailto:mehdi.debbah@hotmail.fr">mehdi.debbah@hotmail.fr</a> |
+        <a href="tel:+33764467379">+33 7 64 46 73 79</a> |
+        <a href="https://github.com/Mehdislik" target="_blank">GitHub</a> |
+        <a href="https://www.linkedin.com/in/mehdi-sofiane-debbah-392a751a3/" target="_blank">LinkedIn</a>
+      </p>
+      <div class="language-switcher">
+        <button id="btn-en">English</button>
+        <button id="btn-fr">Français</button>
+      </div>
     </div>
   </header>
 
-  <!-- CV Section -->
-  <section class="cv-container">
-    <iframe src="CV_2024-11-21_mehdi_sofiane_debbah.pdf" type="application/pdf"></iframe>
-  </section>
+  <!-- Main Content -->
+  <main>
+    <!-- About Me Section -->
+    <section>
+      <h2 id="about-title">À propos de moi</h2>
+      <p id="about-text">
+        Je suis un ingénieur DevOps motivé, spécialisé dans les plateformes cloud, les pipelines CI/CD et l'automatisation. Passionné par la création d'infrastructures évolutives et l'optimisation des performances des systèmes.
+      </p>
+    </section>
 
-  <!-- Footer Section -->
-  <footer>
-    <p>© 2024 Debbah Mehdi Sofiane. All rights reserved.</p>
-  </footer>
+    <!-- PDF Viewer Section -->
+    <section>
+      <h2 id="cv-title">Mon CV</h2>
+      <!-- Embed PDF using the embed tag -->
+      <embed src="assets/my-cv.pdf" width="100%" height="600px" type="application/pdf">
+    </section>
 
+    <!-- Skills Section -->
+    <section>
+      <h2 id="skills-title">Compétences</h2>
+      <ul id="skills-list">
+        <li><img src="assets/google-cloud.png" alt="gcp Logo" class="skill-logo"> Plateformes Cloud :  GCP ,AWS</li>
+        <li><img src="assets/docker-logo.png" alt="Docker Logo" class="skill-logo"> Conteneurisation : Docker, Kubernetes</li>
+        <li><img src="assets/gitlab.jpg" alt="Jenkins Logo" class="skill-logo"> Outils CI/CD : GitLab CI/CD ,Jenkins</li>
+        <li><img src="assets/ansible-Logo.png" alt="Terraform Logo" class="skill-logo"> Infrastructure as Code : Ansible , Terraform</li>
+        <li><img src="assets/Python-logo.png" alt="Python Logo" class="skill-logo"> Programmation : Python, Bash, Java</li>
+      </ul>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
